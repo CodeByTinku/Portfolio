@@ -85,9 +85,10 @@ const Hero = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrolled = window.pageYOffset;
-      const hero = document.getElementById('home');
-      if (hero) {
-        hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+      const heroContent = document.getElementById('hero-content');
+      if (heroContent) {
+        heroContent.style.transform = `translateY(${scrolled * 0.5}px)`;
+        heroContent.style.opacity = 1 - scrolled / 500;
       }
     };
     window.addEventListener('scroll', handleScroll);
@@ -108,7 +109,7 @@ const Hero = () => {
         <div className="absolute top-1/3 right-1/4 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
         <div className="absolute bottom-1/4 left-1/3 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
       </div>
-      <div className="container mx-auto px-4 text-center relative z-10">
+      <div id="hero-content" className="container mx-auto px-4 text-center relative z-10">
         <div className="fade-in">
           <div className="mb-8 flex justify-center">
             <div className="relative">
