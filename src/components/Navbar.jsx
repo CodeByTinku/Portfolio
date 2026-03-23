@@ -1,8 +1,46 @@
 import { useState, useEffect } from 'react';
+import { Howl, Howler } from 'howler';
+import bgMusicFile from '../assets/bg-music.mp3';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
+  const [isPlaying, setIsPlaying] = useState(true);
+  const [bgMusic, setBgMusic] = useState(null);
+
+  useEffect(() => {
+    const sound = new Howl({
+      src: [bgMusicFile],
+      loop: true,
+      volume: 0.3,
+      autoplay: true,
+      onplayerror: function() {
+        sound.once('unlock', function() {
+          sound.play();
+        });
+      }
+    });
+
+    setBgMusic(sound);
+
+    // Browser autoplay policies might block audio until first user interaction
+    // Isliye explicitly hum ensure karenge Howler unlock ho
+    
+    return () => {
+      sound.unload();
+    };
+  }, []);
+
+  const toggleMusic = () => {
+    if (bgMusic) {
+      if (isPlaying) {
+        bgMusic.pause();
+      } else {
+        bgMusic.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -43,13 +81,32 @@ const Navbar = () => {
                 {link}
               </a>
             ))}
+            
+            {/* Desktop Music Toggle Button */}
+            <button 
+              onClick={toggleMusic} 
+              className="text-gray-300 hover:text-purple-400 transition-colors ml-4 focus:outline-none"
+              title={isPlaying ? "Pause Music" : "Play Music"}
+            >
+              <i className={`fas ${isPlaying ? 'fa-volume-up' : 'fa-volume-mute'} text-xl`}></i>
+            </button>
           </div>
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-purple-400"
-          >
-            <i className={`fas ${isOpen ? 'fa-times' : 'fa-bars'} text-2xl`}></i>
-          </button>
+          <div className="flex items-center md:hidden space-x-4">
+            {/* Mobile Music Toggle Button */}
+            <button 
+              onClick={toggleMusic} 
+              className="text-purple-400 focus:outline-none"
+              title={isPlaying ? "Pause Music" : "Play Music"}
+            >
+              <i className={`fas ${isPlaying ? 'fa-volume-up' : 'fa-volume-mute'} text-xl`}></i>
+            </button>
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-purple-400"
+            >
+              <i className={`fas ${isOpen ? 'fa-times' : 'fa-bars'} text-2xl`}></i>
+            </button>
+          </div>
         </div>
         {/* Mobile Menu */}
         {isOpen && (
