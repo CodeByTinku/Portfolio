@@ -23,8 +23,7 @@ const Navbar = () => {
 
     setBgMusic(sound);
 
-    // Browser autoplay policies might block audio until first user interaction
-    // Isliye explicitly hum ensure karenge Howler unlock ho
+    
     
     return () => {
       sound.unload();
