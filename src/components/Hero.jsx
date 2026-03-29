@@ -101,7 +101,7 @@ const Hero = () => {
       className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20"
     >
       {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-100 via-purple-100/50 to-gray-100 dark:from-gray-900 dark:via-purple-900/20 dark:to-gray-900 transition-colors duration-300"></div>
       {/* Particles Background */}
       <div id="particles-js" className="absolute inset-0 z-0"></div>
       <div className="absolute inset-0 pointer-events-none">
@@ -114,7 +114,7 @@ const Hero = () => {
           <div className="mb-8 flex justify-center">
             <div className="relative">
               <div className="w-48 h-48 md:w-64 md:h-64 rounded-full bg-gradient-to-br from-blue-400 via-purple-500 to-pink-500 p-1 animate-pulse-slow">
-                <div className="w-full h-full rounded-full bg-gray-900 overflow-hidden">
+                <div className="w-full h-full rounded-full bg-white dark:bg-gray-900 overflow-hidden text-center flex justify-center pb-0">
                   <img
                     src="./image/myImage.jpg"
                     alt="Tinku Shekhar Das"
@@ -122,7 +122,7 @@ const Hero = () => {
                   />
                 </div>
               </div>
-              <div className="absolute -bottom-2 -right-2 w-16 h-16 bg-green-500 rounded-full border-4 border-gray-900 flex items-center justify-center">
+              <div className="absolute -bottom-2 -right-2 w-16 h-16 bg-green-500 rounded-full border-4 border-white dark:border-gray-900 flex items-center justify-center">
                 <i className="fas fa-code text-2xl text-white"></i>
               </div>
             </div>
@@ -134,7 +134,7 @@ const Hero = () => {
             </span>
           </h1>
 
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 fade-in-up animation-delay-200 h-8">
+          <p className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 mb-8 fade-in-up animation-delay-200 h-8">
             <span>{text}</span>
             <span className="animate-pulse">|</span>
           </p>

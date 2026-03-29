@@ -52,7 +52,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gray-900 border-t border-purple-500/20 relative">
+    <section id="contact" className="py-20 bg-white dark:bg-gray-900 border-t border-purple-500/20 relative transition-colors duration-300">
       <div className="container mx-auto px-4 relative z-10">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 fade-in">
           <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
@@ -63,7 +63,7 @@ const Contact = () => {
           {/* Text and Social Links */}
           <div className="fade-in-up">
             <h3 className="text-2xl font-semibold mb-4 text-purple-400">Let's Talk</h3>
-            <p className="text-gray-300 leading-relaxed mb-8">
+            <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
               I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions. Feel free to reach out via the form or connect with me on social media.
             </p>
             <div className="flex flex-wrap gap-4">
@@ -87,7 +87,7 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20 shadow-2xl fade-in-up animation-delay-200">
+          <div className="bg-gray-50 dark:bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-200 dark:border-purple-500/20 shadow-2xl fade-in-up animation-delay-200">
             <form onSubmit={onSubmit} className="space-y-6">
               <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
 
@@ -100,7 +100,7 @@ const Contact = () => {
                   id="name"
                   name="name"
                   required
-                  className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all outline-none text-white placeholder-gray-500"
+                  className="w-full px-4 py-3 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all outline-none text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500"
                   placeholder="John Doe"
                 />
               </div>
@@ -113,7 +113,7 @@ const Contact = () => {
                   id="email"
                   name="email"
                   required
-                  className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all outline-none text-white placeholder-gray-500"
+                  className="w-full px-4 py-3 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all outline-none text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500"
                   placeholder="john@example.com"
                 />
               </div>
@@ -126,7 +126,7 @@ const Contact = () => {
                   name="message"
                   required
                   rows="4"
-                  className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all outline-none text-white placeholder-gray-500 resize-none"
+                  className="w-full px-4 py-3 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all outline-none text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 resize-none"
                   placeholder="Your message here..."
                 ></textarea>
               </div>
