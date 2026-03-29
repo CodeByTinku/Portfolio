@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { GitHubCalendar } from 'react-github-calendar';
 
 const About = () => {
   return (
@@ -49,6 +50,35 @@ const About = () => {
                 <span>Self-Taught Developer</span>
               </div>
             </div>
+          </motion.div>
+        </div>
+        
+        {/* GitHub Contribution Graph */}
+        <div className="max-w-4xl mx-auto mt-20">
+          <motion.h3 
+            className="text-3xl font-bold text-center mb-8 text-gray-800 dark:text-gray-200"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            GitHub <span className="text-purple-500">Contributions</span>
+          </motion.h3>
+          <motion.div 
+            className="bg-gray-900 rounded-2xl p-6 md:p-8 border border-purple-500/20 shadow-2xl flex justify-center overflow-x-auto text-white"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <GitHubCalendar 
+              username="CodeByTinku" 
+              year={2026}
+              blockSize={15}
+              blockMargin={5}
+              colorScheme="dark"
+              fontSize={16}
+            />
           </motion.div>
         </div>
       </div>
