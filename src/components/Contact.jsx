@@ -69,8 +69,8 @@ const Contact = () => {
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-start">
           {/* Text and Social Links */}
           <motion.div 
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
@@ -101,8 +101,8 @@ const Contact = () => {
           {/* Contact Form */}
           <motion.div 
             className="bg-gray-50 dark:bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-200 dark:border-purple-500/20 shadow-2xl"
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
