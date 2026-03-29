@@ -23,35 +23,7 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  useEffect(() => {
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px',
-    };
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, observerOptions);
-
-    const animatedElements = document.querySelectorAll(
-      '.project-card, .skill-card, .fade-in-on-scroll'
-    );
-    
-    animatedElements.forEach((el) => {
-      el.classList.add('fade-in-on-scroll');
-      observer.observe(el);
-    });
-
-    return () => {
-      animatedElements.forEach((el) => {
-        observer.unobserve(el);
-      });
-    };
-  }, []);
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });

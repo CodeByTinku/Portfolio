@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
 
 const Hero = () => {
   const [text, setText] = useState('');
@@ -110,8 +111,13 @@ const Hero = () => {
         <div className="absolute bottom-1/4 left-1/3 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
       </div>
       <div id="hero-content" className="container mx-auto px-4 text-center relative z-10">
-        <div className="fade-in">
-          <div className="mb-8 flex justify-center">
+        <div>
+          <motion.div 
+            className="mb-8 flex justify-center"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6 }}
+          >
             <div className="relative">
               <div className="w-48 h-48 md:w-64 md:h-64 rounded-full bg-gradient-to-br from-blue-400 via-purple-500 to-pink-500 p-1 animate-pulse-slow">
                 <div className="w-full h-full rounded-full bg-white dark:bg-gray-900 overflow-hidden text-center flex justify-center pb-0">
@@ -126,20 +132,35 @@ const Hero = () => {
                 <i className="fas fa-code text-2xl text-white"></i>
               </div>
             </div>
-          </div>
+          </motion.div>
 
-          <h1 className="text-5xl md:text-7xl font-bold mb-4 fade-in-up">
+          <motion.h1 
+            className="text-5xl md:text-7xl font-bold mb-4"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
             <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
               Tinku Shekhar Das
             </span>
-          </h1>
+          </motion.h1>
 
-          <p className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 mb-8 fade-in-up animation-delay-200 h-8">
+          <motion.p 
+            className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 mb-8 h-8"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+          >
             <span>{text}</span>
             <span className="animate-pulse">|</span>
-          </p>
+          </motion.p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center fade-in-up animation-delay-400">
+          <motion.div 
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+          >
             <a href="#projects" className="cta-button group">
               <span>View Projects</span>
               <i className="fas fa-arrow-down ml-2 group-hover:translate-y-1 transition-transform"></i>
@@ -153,7 +174,7 @@ const Hero = () => {
               <i className="fab fa-github mr-2"></i>
               <span>GitHub</span>
             </a>
-          </div>
+          </motion.div>
         </div>
       </div>
 

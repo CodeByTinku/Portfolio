@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion';
+
 const Projects = () => {
   const projects = [
     {
@@ -75,14 +77,27 @@ const Projects = () => {
   return (
     <section id="projects" className="py-20 bg-gray-50 dark:bg-gray-800/50 transition-colors duration-300">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 fade-in">
+        <motion.h2 
+          className="text-4xl md:text-5xl font-bold text-center mb-12"
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
           <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
             Projects
           </span>
-        </h2>
+        </motion.h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {projects.map((project, index) => (
-            <div key={index} className={`project-card fade-in-up animation-delay-${index * 200}`}>
+            <motion.div 
+              key={index} 
+              className="project-card"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
               <div className={`relative h-48 bg-gradient-to-br ${project.bgGradient} rounded-t-xl flex items-center justify-center`}>
                 <i className={`${project.icon}`}></i>
               </div>
@@ -117,7 +132,7 @@ const Projects = () => {
                   </a>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

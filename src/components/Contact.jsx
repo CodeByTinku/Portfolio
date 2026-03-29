@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 
 const Contact = () => {
   const [loading, setLoading] = useState(false);
@@ -54,14 +55,25 @@ const Contact = () => {
   return (
     <section id="contact" className="py-20 bg-white dark:bg-gray-900 border-t border-purple-500/20 relative transition-colors duration-300">
       <div className="container mx-auto px-4 relative z-10">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 fade-in">
+        <motion.h2 
+          className="text-4xl md:text-5xl font-bold text-center mb-12"
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
           <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
             Get In Touch
           </span>
-        </h2>
+        </motion.h2>
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-start">
           {/* Text and Social Links */}
-          <div className="fade-in-up">
+          <motion.div 
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
             <h3 className="text-2xl font-semibold mb-4 text-purple-400">Let's Talk</h3>
             <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
               I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions. Feel free to reach out via the form or connect with me on social media.
@@ -84,10 +96,16 @@ const Contact = () => {
                 <span className="mt-2 text-sm">Lavanzo</span>
               </a>
             </div>
-          </div>
+          </motion.div>
 
           {/* Contact Form */}
-          <div className="bg-gray-50 dark:bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-200 dark:border-purple-500/20 shadow-2xl fade-in-up animation-delay-200">
+          <motion.div 
+            className="bg-gray-50 dark:bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-200 dark:border-purple-500/20 shadow-2xl"
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
             <form onSubmit={onSubmit} className="space-y-6">
               <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
 
@@ -153,7 +171,7 @@ const Contact = () => {
                 </p>
               )}
             </form>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

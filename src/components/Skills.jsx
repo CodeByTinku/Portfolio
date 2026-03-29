@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion';
+
 const Skills = () => {
   const skills = [
     { name: 'React.js', icon: 'fab fa-react', color: 'text-cyan-400' },
@@ -25,17 +27,30 @@ const Skills = () => {
   return (
     <section id="skills" className="py-20">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 fade-in">
+        <motion.h2 
+          className="text-4xl md:text-5xl font-bold text-center mb-12"
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
           <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
             Skills
           </span>
-        </h2>
+        </motion.h2>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
           {skills.map((skill, index) => (
-            <div key={index} className="skill-card fade-in-on-scroll group">
+            <motion.div 
+              key={index} 
+              className="skill-card group"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.4, delay: (index % 4) * 0.1 }}
+            >
               <i className={`${skill.icon} text-5xl ${skill.color} mb-3 group-hover:scale-110 transition-transform`}></i>
               <h3 className="text-lg font-semibold">{skill.name}</h3>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
