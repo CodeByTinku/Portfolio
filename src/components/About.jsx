@@ -42,7 +42,7 @@ const About = () => {
               </div>
               <div className="flex items-center space-x-2 text-gray-600 dark:text-gray-400">
                 <i className="fas fa-graduation-cap text-blue-400"></i>
-                <span>Class 11 Student</span>
+                <span>Class 12 Student</span>
               </div>
               <div className="flex items-center space-x-2 text-gray-600 dark:text-gray-400">
                 <i className="fas fa-code text-green-400"></i>
