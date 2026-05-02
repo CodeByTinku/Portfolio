@@ -33,8 +33,7 @@ const About = () => {
               <span className="text-green-400 font-semibold">Vite</span>. Passionate
               about building frontend apps, debugging code, exploring{' '}
               <span className="text-pink-400 font-semibold">ML/AI</span>, and devOps. I am also interested in open source.
-              Daily coding on{' '}
-              <span className="text-gray-900 dark:text-white font-semibold">GitHub</span>.
+              
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-4">
               <div className="flex items-center space-x-2 text-gray-600 dark:text-gray-400">
