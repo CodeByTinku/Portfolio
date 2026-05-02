@@ -25,7 +25,7 @@ const About = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed text-center">
-              Class 11 student from{' '}
+              Class 12 student from{' '}
               <span className="text-purple-400 font-semibold">Assam</span>,
               self-taught in web development using{' '}
               <span className="text-blue-400 font-semibold">React</span>,{' '}
