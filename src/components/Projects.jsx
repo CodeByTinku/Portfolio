@@ -80,7 +80,7 @@ const Projects = () => {
       description: 'A React app to discover anime and manage your personal watchlist, powered by the Jikan API (unofficial MyAnimeList API).',
       techs: ['React', 'Chartjs', 'Tailwind Css', 'Framer-Motion'],
       github: 'https://github.com/CodeByTinku/Dropshipping-Profit-Calculator',
-      live: '',
+      live: 'https://dropshipping-profit-calculator.vercel.app/',
     },
   ];
 
