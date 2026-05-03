@@ -72,6 +72,16 @@ const Projects = () => {
       github: 'https://github.com/CodeByTinku/Anime-Explorer',
       live: 'https://anime-explorer-chi.vercel.app/',
     },
+    {
+      title: 'Dropshipping-Profit-Calculator',
+      icon: 'fa-solid fa-clapperboard text-6xl text-purple-400',
+      bgGradient: 'from-blue-500/20 to-purple-500/20',
+      titleColor: 'text-purple-400',
+      description: 'A React app to discover anime and manage your personal watchlist, powered by the Jikan API (unofficial MyAnimeList API).',
+      techs: ['React', 'Chartjs', 'Tailwind Css', 'Framer-Motion'],
+      github: '',
+      live: '',
+    },
   ];
 
   return (
