@@ -79,7 +79,7 @@ const Projects = () => {
       titleColor: 'text-purple-400',
       description: 'A React app to discover anime and manage your personal watchlist, powered by the Jikan API (unofficial MyAnimeList API).',
       techs: ['React', 'Chartjs', 'Tailwind Css', 'Framer-Motion'],
-      github: '',
+      github: 'https://github.com/CodeByTinku/Dropshipping-Profit-Calculator',
       live: '',
     },
   ];
