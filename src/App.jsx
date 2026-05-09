@@ -6,6 +6,7 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import CustomCursor from './components/CustomCursor';
 
 function App() {
   const [showBackToTop, setShowBackToTop] = useState(false);
@@ -30,7 +31,8 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className="App md:cursor-none">
+      <CustomCursor />
       <Navbar />
       <main>
         <Hero />
