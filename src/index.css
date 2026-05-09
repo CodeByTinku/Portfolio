@@ -178,7 +178,6 @@ body {
 }
 
 .project-card:hover {
-    transform: translateY(-10px);
     border-color: rgba(139, 92, 246, 0.6);
     box-shadow: 0 15px 40px rgba(139, 92, 246, 0.15);
 }
@@ -187,11 +186,6 @@ body {
     box-shadow: 0 15px 40px rgba(139, 92, 246, 0.3);
 }
 
-.project-card:hover {
-    transform: translateY(-10px);
-    border-color: rgba(139, 92, 246, 0.6);
-    box-shadow: 0 15px 40px rgba(139, 92, 246, 0.3);
-}
 
 .tech-badge {
     display: inline-block;

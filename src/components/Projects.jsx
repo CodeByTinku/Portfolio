@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import Tilt from 'react-parallax-tilt';
 
 const Projects = () => {
   const projects = [
@@ -102,46 +103,59 @@ const Projects = () => {
           {projects.map((project, index) => (
             <motion.div 
               key={index} 
-              className="project-card"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="h-full"
             >
-              <div className={`relative h-48 bg-gradient-to-br ${project.bgGradient} rounded-t-xl flex items-center justify-center`}>
-                <i className={`${project.icon}`}></i>
-              </div>
-              <div className="p-6">
-                <h3 className={`text-2xl font-bold mb-3 ${project.titleColor}`}>{project.title}</h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-4">{project.description}</p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.techs.map((tech, i) => (
-                    <span key={i} className="tech-badge">
-                      {tech}
-                    </span>
-                  ))}
+              <Tilt
+                className="project-card h-full flex flex-col"
+                glareEnable={true}
+                glareMaxOpacity={0.15}
+                glareColor="white"
+                glarePosition="all"
+                glareBorderRadius="16px"
+                tiltMaxAngleX={8}
+                tiltMaxAngleY={8}
+                scale={1.02}
+                transitionSpeed={2000}
+              >
+                <div className={`relative h-48 bg-gradient-to-br ${project.bgGradient} rounded-t-xl flex items-center justify-center shrink-0`}>
+                  <i className={`${project.icon}`}></i>
                 </div>
-                <div className="flex gap-4">
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="project-link group"
-                  >
-                    <i className="fab fa-github mr-2"></i>
-                    <span>GitHub</span>
-                  </a>
-                  <a
-                    href={project.live}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="project-link group"
-                  >
-                    <i className="fas fa-external-link-alt mr-2"></i>
-                    <span>Live Demo</span>
-                  </a>
+                <div className="p-6 flex flex-col flex-grow">
+                  <h3 className={`text-2xl font-bold mb-3 ${project.titleColor}`}>{project.title}</h3>
+                  <p className="text-gray-600 dark:text-gray-300 mb-4 flex-grow">{project.description}</p>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.techs.map((tech, i) => (
+                      <span key={i} className="tech-badge">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="flex gap-4 mt-auto">
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="project-link group interactive"
+                    >
+                      <i className="fab fa-github mr-2"></i>
+                      <span>GitHub</span>
+                    </a>
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="project-link group interactive"
+                    >
+                      <i className="fas fa-external-link-alt mr-2"></i>
+                      <span>Live Demo</span>
+                    </a>
+                  </div>
                 </div>
-              </div>
+              </Tilt>
             </motion.div>
           ))}
         </div>
