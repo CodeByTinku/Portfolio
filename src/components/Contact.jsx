@@ -91,10 +91,7 @@ const Contact = () => {
                 <i className="fas fa-envelope text-3xl"></i>
                 <span className="mt-2 text-sm">Email</span>
               </a>
-              <a href="https://lavanzo.in" className="social-link group" target="_blank" rel="noreferrer">
-                <i className="fa-brands fa-shopify text-3xl"></i>
-                <span className="mt-2 text-sm">Lavanzo</span>
-              </a>
+              
             </div>
           </motion.div>
 
