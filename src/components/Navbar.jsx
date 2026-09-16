@@ -117,10 +117,17 @@ const Navbar = () => {
             {/* Desktop Music Toggle Button */}
             <button 
               onClick={toggleMusic} 
-              className="text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors ml-4 focus:outline-none"
+              className="flex items-center gap-2 text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors ml-4 focus:outline-none interactive"
               title={isPlaying ? "Pause Music" : "Play Music"}
             >
               <i className={`fas ${isPlaying ? 'fa-volume-up' : 'fa-volume-mute'} text-xl`}></i>
+              <div className={`equalizer-container ${isPlaying ? 'playing' : ''}`}>
+                <span className="equalizer-bar"></span>
+                <span className="equalizer-bar"></span>
+                <span className="equalizer-bar"></span>
+                <span className="equalizer-bar"></span>
+                <span className="equalizer-bar"></span>
+              </div>
             </button>
           </div>
           <div className="flex items-center md:hidden space-x-4">
@@ -134,10 +141,17 @@ const Navbar = () => {
             {/* Mobile Music Toggle Button */}
             <button 
               onClick={toggleMusic} 
-              className="text-purple-600 dark:text-purple-400 focus:outline-none"
+              className="flex items-center gap-2 text-purple-600 dark:text-purple-400 focus:outline-none"
               title={isPlaying ? "Pause Music" : "Play Music"}
             >
               <i className={`fas ${isPlaying ? 'fa-volume-up' : 'fa-volume-mute'} text-xl`}></i>
+              <div className={`equalizer-container ${isPlaying ? 'playing' : ''}`}>
+                <span className="equalizer-bar"></span>
+                <span className="equalizer-bar"></span>
+                <span className="equalizer-bar"></span>
+                <span className="equalizer-bar"></span>
+                <span className="equalizer-bar"></span>
+              </div>
             </button>
             <button
               onClick={() => setIsOpen(!isOpen)}

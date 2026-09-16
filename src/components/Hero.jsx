@@ -122,7 +122,7 @@ const Hero = () => {
               <div className="w-48 h-48 md:w-64 md:h-64 rounded-full bg-gradient-to-br from-blue-400 via-purple-500 to-pink-500 p-1 animate-pulse-slow">
                 <div className="w-full h-full rounded-full bg-white dark:bg-gray-900 overflow-hidden text-center flex justify-center pb-0">
                   <img
-                    src="./image/myImage.jpg"
+                    src="./image/myImg.jpg"
                     alt="Tinku Shekhar Das"
                     className="w-full h-full object-cover"
                   />
