@@ -83,13 +83,18 @@ const Contact = () => {
                 <i className="fab fa-github text-3xl"></i>
                 <span className="mt-2 text-sm">GitHub</span>
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-link group">
-                <i className="fab fa-linkedin text-3xl"></i>
-                <span className="mt-2 text-sm">LinkedIn</span>
+              <a href="https://discord.com/users/1389881046471938048" className="social-link group" target="_blank" rel="noopener noreferrer">
+                <i className="fab fa-discord text-3xl"></i>
+                <span className="mt-2 text-sm">Discord</span>
               </a>
+              
               <a href="mailto:your.email@gmail.com" className="social-link group" target="_blank" rel="noreferrer">
                 <i className="fas fa-envelope text-3xl"></i>
                 <span className="mt-2 text-sm">Email</span>
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-link group">
+                <i className="fab fa-linkedin text-3xl"></i>
+                <span className="mt-2 text-sm">LinkedIn</span>
               </a>
               
             </div>
