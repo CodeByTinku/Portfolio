@@ -76,7 +76,7 @@ const Contact = () => {
           >
             <h3 className="text-2xl font-semibold mb-4 text-purple-400">Let's Talk</h3>
             <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
-              I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions. Feel free to reach out via the form or connect with me on social media.
+              I'm always open to discussing new projects, creative ideas, or opportunities to collaborate. I'm mostly active on Discord, so feel free to reach out there!
             </p>
             <div className="flex flex-wrap gap-4">
               <a href="https://github.com/codeByTinku" target="_blank" rel="noopener noreferrer" className="social-link group">
